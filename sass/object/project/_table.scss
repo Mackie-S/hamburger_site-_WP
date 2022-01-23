@@ -1,0 +1,21 @@
+@use "../../foundation/breakpoints" as bp;
+
+.p-table {
+  width: 100%;
+  border: solid 0.1px #707070;
+  border-collapse: collapse;
+  background-color: white;
+  color: #3c2a10;
+  font-weight: regular;
+  //nth-of-child(1)を使う
+  td {
+    border: solid 0.1px #707070;
+    padding: 30px 0 30px 20px;
+    @include bp.bp(tab) {
+      padding-right: 30px;
+    }
+    &:nth-child(1) {
+      width: 30%;
+    }
+  }
+}

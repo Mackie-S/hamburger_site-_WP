@@ -1,2 +1,2 @@
-# hamburger_site_WP
-ハンバーガーサイトのWordPress化のための新たなリポジトリ
+# hamburger_site
+デザインカンプからのコーディング課題

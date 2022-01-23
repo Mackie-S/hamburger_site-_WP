@@ -1,0 +1,22 @@
+@use "../../foundation/breakpoints" as bp;
+/*ダミーサイトと書かれた部分*/
+.p-front-main__hero {
+  background-image: url("/images/front-main_hero_sp.svg");
+  @include bp.bp(tab) {
+    background-image: url("/images/front-main_hero_pc.svg");
+  }
+  &__title {
+    padding-left: 37px;
+    padding-bottom: 30%;
+    @include bp.bp(tab) {
+      font-size: 40px;
+      padding-top: 15%;
+      padding-bottom: 15%;
+      padding-left: 86px;
+    }
+    @include bp.bp(pc) {
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+  }
+}
