@@ -1,0 +1,11 @@
+// mainエリアの左右の余白
+@use "../../foundation/breakpoints" as bp;
+.c-container{
+  padding: 20px;
+  @include bp.bp(tab) {
+    padding: 40px;
+  }
+  @include bp.bp(lpc) {
+    padding: 80px;
+  }
+}

@@ -1,0 +1,28 @@
+@use "breakpoints" as bp;
+
+body {
+  font-family: "M+ 1m", sans-serif;
+  width: 100%;
+  color: #3c2a10;
+  @include bp.bp(pc) {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    justify-content: center;
+    margin: 0;
+  }
+  @include bp.bp(lpc) {
+    grid-template-columns: 1fr 367px;
+  }
+}
+h1,
+h2 {
+  font-family: "Roboto", "M+ 1m", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #707070;
+}
+dt,
+dd {
+  font-family: "M+ 1m", sans-serif;
+}

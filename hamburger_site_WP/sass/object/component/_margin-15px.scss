@@ -1,0 +1,15 @@
+@use "../../foundation/breakpoints" as bp;
+//縦軸の要素間の余白
+.c-margin-15px--sp{
+  margin: 15px 0;
+}
+.c-margin-15px--tab{
+  @include bp.bp(tab){
+    margin: 15px 0;
+  }
+}
+.c-margin-15px--pc{
+  @include bp.bp(pc){
+    margin: 15px 0;
+  }
+}

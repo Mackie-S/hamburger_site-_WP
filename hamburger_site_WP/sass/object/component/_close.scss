@@ -1,0 +1,33 @@
+@use "../../foundation/breakpoints" as bp;
+
+.c-close {
+  z-index: 100;
+  right: 5%;
+  top: 5%;
+  width: 40px;
+  height: 40px;
+  position: absolute; /*indexでは.p-sidebarに対して*/
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  border: none;
+  @include bp.bp(pc) {
+    display: none;
+  }
+  &--slash1 {
+    display: inline-block;
+    font-size: 0;
+    background-color: #707070;
+    width: 40px;
+    height: 5px;
+    transform: translateY(2px) rotate(-45deg);
+  }
+  &--slash2 {
+    display: inline-block;
+    font-size: 0;
+    background-color: #707070;
+    width: 40px;
+    height: 5px;
+    transform: translateY(-22px) rotate(45deg);
+  }
+}

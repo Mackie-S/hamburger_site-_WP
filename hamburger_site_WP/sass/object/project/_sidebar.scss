@@ -1,0 +1,62 @@
+@use "../../foundation/breakpoints" as bp;
+
+.p-sidebar {
+  display: block; //編集時はblockにして確認する
+  color: #707070;
+  background-color: #f2ede9;
+  width: 328px;
+  height: 100vh;
+  padding-top: 220px;
+  padding-left: 46px;
+  padding-bottom: 100%;
+  position: fixed;
+  top: 0;
+  right: -120%;
+  transition: all 0.3s;
+  z-index: 9999;
+  overflow: auto;
+  &.active {
+    right: 0;
+    position: absolute;
+  }
+  @include bp.bp(tab) {
+    width: 367px;
+  }
+  @include bp.bp(pc) {
+    padding-top: 0;
+    padding-left: 10%;
+    padding-bottom: auto;
+    height: auto;
+    display: block;
+    position: inherit;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    width: auto;
+    transition: inherit;
+    overflow: inherit;
+    z-index: inherit;
+  }
+  @include bp.bp(lpc) {
+    width: 367px;
+    padding-left: 46px;
+  }
+  &__menu {
+    display: none;
+
+    @include bp.bp(pc) {
+      display: block;
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+  }
+  &__unit {
+    font-weight: bold;
+    & a {
+      color: #707070;
+    }
+  }
+  &__list {
+    list-style: none;
+    line-height: 40px;
+  }
+}
