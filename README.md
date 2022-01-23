@@ -1,0 +1,2 @@
+# hamburger_site-_WP
+ハンバーガーサイトのWordPress化のための新たなリポジトリ
