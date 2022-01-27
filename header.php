@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="<?php language_attributes(); ?>">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hamburger</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link href="https://mplus-fonts.osdn.jp/webfonts/basic_latin/mplus_webfonts.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/favicon.ico">
+  <meta name="format-detection" content="telephone=no">
+  <!-- 電話番号っぽくてもリンクにするな！という意味 -->
+  <meta name="description" content="WordPress theme development static data of Hamburger site">
+  <meta name="keywords" content="WordPress, Theme, development,Hamburger site">
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
+  <?php wp_head(); ?>
 </head>
-<body>
+
+<body <?php body_class(); ?>>
   <header class="l-header">
-    <div class="p-header"><!--FLOCSSのPDFを模して記述、試しにこれで流してみる-->
+    <div class="p-header">
+      <!--FLOCSSのPDFを模して記述、試しにこれで流してみる-->
       <h2 class="p-header__menu">
         Menu
       </h2>
       <h1 class="p-header__title">
-        <a href="index.html">Hamburger</a>
+        <a href="<?php echo esc_url(home_url('/'));?>"><?php bloginfo('name');?></a>
       </h1>
-      <!--サイト内検索の仕組みがまだ理解できてないので追々理解-->
-      <div class="p-search">
-        <form method="get" action="archive_search.html" class="p-search__box">
-          <input type="search" name="search" class="p-search__box__text">
-          <button type="submit" name="submit" class="p-search__box__button c-button">検索</button>
-        </form>
+      <p class="p-header__description">
+        <?php bloginfo('description'); ?></p>
+      <div class=" p-search">
+        <?php get_search_form(); ?>
       </div>
+      <?php wp_nav_menu(); ?>
     </div>
   </header>
