@@ -1,15 +1,3 @@
-/*
-Theme Name: hamburger_site_WP
-Description: デザインカンプコーディングからのWP化
-Version: 1.0.0
-Theme URI: https://github.com/Mackie-S/hamburger_site_WP.git
-Author: Mackie
-Author URI: https://wp.yat-net.net.com
-Tags: right-sidebar, blog
-License: GNU General Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: hamburger_site_WP
-*/
 @charset "UTF-8";
 body {
   font-family: "M+ 1m", sans-serif;
@@ -129,7 +117,7 @@ select {
 }
 
 .l-footer {
-  background: url("/images/footer_background-image_n.png");
+  background: url("images/footer_background-image_n.png");
   width: 100%;
   height: 150px;
   color: #fff;
@@ -456,7 +444,7 @@ select {
   content: "";
   width: 24px;
   height: 24px;
-  background: url(/images/search_icon＿n.svg) no-repeat center center/auto 100%;
+  background: url(images/search_icon＿n.svg) no-repeat center center/auto 100%;
   display: inline-block;
   position: absolute;
   text-align: center;
@@ -577,11 +565,11 @@ select {
 
 /*ダミーサイトと書かれた部分*/
 .p-front-main__hero {
-  background-image: url("/images/front-main_hero_sp.svg");
+  background-image: url("images/front-main_hero_sp.svg");
 }
 @media screen and (min-width: 600px) {
   .p-front-main__hero {
-    background-image: url("/images/front-main_hero_pc.svg");
+    background-image: url("images/front-main_hero_pc.svg");
   }
 }
 .p-front-main__hero__title {
@@ -606,18 +594,18 @@ select {
 .p-archive-main__hero {
   display: flex;
   flex-direction: column;
-  background-image: url("/images/archive_image_sp.svg");
+  background-image: url("images/archive_image_sp.svg");
   background-color: black;
 }
 @media screen and (min-width: 600px) {
   .p-archive-main__hero {
-    background-image: url("/images/archive_image_tab.svg");
+    background-image: url("images/archive_image_tab.svg");
     flex-direction: inherit;
   }
 }
 @media screen and (min-width: 1200px) {
   .p-archive-main__hero {
-    background-image: url("/images/archive_image_pc.svg");
+    background-image: url("images/archive_image_pc.svg");
   }
 }
 .p-archive-main__hero__title {
@@ -866,7 +854,7 @@ select {
 }
 .p-pagination__list-item--prev a::before {
   content: "";
-  background: url(/images/prev_icon.svg) no-repeat center center/auto 100%;
+  background: url(images/prev_icon.svg) no-repeat center center/auto 100%;
   width: 16px;
   height: 16px;
   display: inline-block;
@@ -876,7 +864,7 @@ select {
 }
 .p-pagination__list-item--next a::after {
   content: "";
-  background: url(/images/next_icon.svg) no-repeat center center/auto 100%;
+  background: url(images/next_icon.svg) no-repeat center center/auto 100%;
   width: 16px;
   height: 16px;
   display: inline-block;
@@ -982,11 +970,11 @@ select {
 }
 
 .p-take-out {
-  background-image: url("/images/take-out_image.svg");
+  background-image: url("images/take-out_image.svg");
 }
 
 .p-eat-in {
-  background-image: url("/images/eat-in_image.svg");
+  background-image: url("images/eat-in_image.svg");
   margin-top: 20px;
 }
 @media screen and (min-width: 600px) {
@@ -998,7 +986,7 @@ select {
 /* map */
 .p-access {
   position: relative;
-  background-image: url(../../../images/map_sp.svg);
+  background-image: url(images/map_sp.svg);
   background-size: cover;
   background-color: black;
   background-position: center 0;
@@ -1007,12 +995,12 @@ select {
 @media screen and (min-width: 600px) {
   .p-access {
     min-height: inherit;
-    background-image: url(../../../images/map_tablet.svg);
+    background-image: url(images/map_tablet.svg);
   }
 }
 @media screen and (min-width: 1200px) {
   .p-access {
-    background-image: url(../../../images/map_pc.svg);
+    background-image: url(images/map_pc.svg);
   }
 }
 .p-access .p-store-description {
@@ -1082,11 +1070,11 @@ select {
 
 /* test*/
 .p-single-main__hero {
-  background-image: url("/images/single_hero_sp.svg");
+  background-image: url("images/single_hero_sp.svg");
 }
 @media screen and (min-width: 1200px) {
   .p-single-main__hero {
-    background-image: url("/images/single_hero_pc.svg");
+    background-image: url("images/single_hero_pc.svg");
   }
 }
 .p-single-main__hero__title {
@@ -1203,7 +1191,7 @@ select {
 }
 
 .p-page-main__hero {
-  background-image: url("/images/page_hero.svg");
+  background-image: url("images/page_hero.svg");
 }
 .p-page-main__hero__title {
   padding-top: 20%;
@@ -1230,6 +1218,18 @@ select {
   width: 100%;
 }
 
+/*
+Theme Name: hamburger_site_WP
+Description: デザインカンプコーディングからのWP化
+Version: 1.0.0
+Theme URI: https://github.com/Mackie-S/hamburger_site_WP.git
+Author: Mackie
+Author URI: https://wp.yat-net.net.com
+Tags: right-sidebar, blog
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: hamburger_site_WP
+*/
 /**
 * Foundation
 * ========================== */

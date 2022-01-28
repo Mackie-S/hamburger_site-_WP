@@ -1,9 +1,9 @@
 @use "../../foundation/breakpoints" as bp;
 /*ダミーサイトと書かれた部分*/
 .p-front-main__hero {
-  background-image: url("/images/front-main_hero_sp.svg");
+  background-image: url("images/front-main_hero_sp.svg");
   @include bp.bp(tab) {
-    background-image: url("/images/front-main_hero_pc.svg");
+    background-image: url("images/front-main_hero_pc.svg");
   }
   &__title {
     padding-left: 37px;

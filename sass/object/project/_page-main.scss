@@ -1,7 +1,7 @@
 @use "../../foundation/breakpoints" as bp;
 // singleとpageのtop部分
 .p-page-main__hero {
-  background-image: url("/images/page_hero.svg");
+  background-image: url("images/page_hero.svg");
   &__title {
     padding-top: 20%;
     padding-bottom: 20%;

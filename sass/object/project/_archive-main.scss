@@ -3,14 +3,14 @@
 .p-archive-main__hero {
   display: flex;
   flex-direction: column;
-  background-image: url("/images/archive_image_sp.svg");
+  background-image: url("images/archive_image_sp.svg");
   background-color: rgba($color: #000000, $alpha: 1.0);
   @include bp.bp(tab) {
-    background-image: url("/images/archive_image_tab.svg");
+    background-image: url("images/archive_image_tab.svg");
     flex-direction: inherit;
   }
   @include bp.bp(pc) {
-    background-image: url("/images/archive_image_pc.svg");
+    background-image: url("images/archive_image_pc.svg");
   }
   &__title {
     padding-top: 30%;
