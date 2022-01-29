@@ -1,7 +1,9 @@
 <?php
-    add_theme_support('menus');
-    add_theme_support('title-tag');
-    add_theme_support( 'post-thumbnails' );
+    add_theme_support('menus'); //管理画面のメニュー追加
+    add_theme_support('title-tag'); //タイトルタグサポートの許可
+    add_theme_support( 'post-thumbnails' ); //アイキャッチ画の取り扱い許可
+    
+    //タイトル出力記述-------------------------------------------
     // "hamburgersitewp"という名前はlocalディレクトリ直下のディレクトリ名
     function hamburgersitewp_title( $title ) {
         if ( is_front_page() && is_home() ) { //トップページなら
@@ -12,6 +14,7 @@
             return $title;
         }
     add_filter( 'pre_get_document_title', 'hamburgersitewp_title' );
+    //タイトル出力記述終了-----------------------------------------
     
     //もともと<head>で読み込んでたファイルの読み込み---------------
     function hamburgersitewp_script() {
@@ -23,7 +26,7 @@
         wp_enqueue_script('js-file', get_template_directory_uri().'/script.js', array(), '1.0.0');
     }
     add_action( 'wp_enqueue_scripts', 'hamburgersitewp_script' );
-    //読み込み記述終了
+    //読み込み記述終了----------------------------------------------
 
     // 使わないかも知れないけどウィジェット機能追加-------------
     function hamburgersitewp_widgets_init() {

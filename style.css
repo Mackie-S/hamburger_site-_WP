@@ -567,6 +567,9 @@ select {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+.p-sidebar__list li {
+  margin-top: 15px;
+}
 
 /*ダミーサイトと書かれた部分*/
 .p-front-main__hero {
