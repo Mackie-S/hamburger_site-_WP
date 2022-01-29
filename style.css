@@ -502,7 +502,6 @@ select {
   width: 328px;
   height: 100vh;
   padding-top: 220px;
-  padding-left: 46px;
   padding-bottom: 100%;
   position: fixed;
   top: 0;
@@ -523,14 +522,13 @@ select {
 @media screen and (min-width: 1200px) {
   .p-sidebar {
     padding-top: 0;
-    padding-left: 10%;
     padding-bottom: auto;
     height: auto;
     display: block;
     position: inherit;
     grid-column: 2/3;
     grid-row: 1/4;
-    width: auto;
+    width: 300px;
     transition: inherit;
     overflow: inherit;
     z-index: inherit;
@@ -539,28 +537,35 @@ select {
 @media screen and (min-width: 1550px) {
   .p-sidebar {
     width: 367px;
-    padding-left: 46px;
   }
 }
 .p-sidebar__menu {
   display: none;
+  padding-left: 40px;
 }
 @media screen and (min-width: 1200px) {
   .p-sidebar__menu {
     display: block;
+    font-size: 30px;
     padding-top: 90px;
-    padding-bottom: 90px;
+    padding-bottom: 70px;
   }
 }
 .p-sidebar__unit {
   font-weight: bold;
+  font-size: 24px;
+  list-style: none;
 }
-.p-sidebar__unit a {
-  color: #707070;
+.p-sidebar__unit > a {
+  display: block;
 }
 .p-sidebar__list {
   list-style: none;
   line-height: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 /*ダミーサイトと書かれた部分*/

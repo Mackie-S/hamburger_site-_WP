@@ -28,6 +28,5 @@
       <div class=" p-search">
         <?php get_search_form(); ?>
       </div>
-      <?php wp_nav_menu(); ?>
     </div>
   </header>

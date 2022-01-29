@@ -13,6 +13,7 @@
         }
     add_filter( 'pre_get_document_title', 'hamburgersitewp_title' );
     
+    //もともと<head>で読み込んでたファイルの読み込み---------------
     function hamburgersitewp_script() {
         wp_enqueue_style( 'mplus1m', '//mplus-fonts.osdn.jp/webfonts/basic_latin/mplus_webfonts.css', array() );
         wp_enqueue_style( 'Roboto', '//fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap', array() );
@@ -20,11 +21,11 @@
         wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.0.0' );
         wp_enqueue_script('jquery', get_template_directory_uri().'//code.jquery.com/jquery-3.6.0.min.js', array(), '3.6.0');
         wp_enqueue_script('js-file', get_template_directory_uri().'/script.js', array(), '1.0.0');
-        
-        
     }
     add_action( 'wp_enqueue_scripts', 'hamburgersitewp_script' );
+    //読み込み記述終了
 
+    // 使わないかも知れないけどウィジェット機能追加-------------
     function hamburgersitewp_widgets_init() {
         register_sidebar (
             array(
@@ -39,3 +40,15 @@
         );
     }
     add_action( 'widgets_init', 'hamburgersitewp_widgets_init' );
+    //ウィジェット記述終わり-------------------------------------
+
+    //カスタムウォーカー編集(カスタムメニューのulに勝手につくsub-menuを退かしたいため記述)
+    class custom_walker_nav_menu extends Walker_Nav_Menu {
+        function start_lvl(&$output, $depth = 0, $args = array()) {
+          $output .= '<ul class="p-sidebar__list"">';
+        }
+        function end_lvl(&$output, $depth = 0, $args = array()) {
+          $output .= '</ul>';
+        }
+      }
+    //カスタムウォーカー編集終わり-------------------------------------

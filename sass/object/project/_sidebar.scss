@@ -7,7 +7,7 @@
   width: 328px;
   height: 100vh;
   padding-top: 220px;
-  padding-left: 46px;
+
   padding-bottom: 100%;
   position: fixed;
   top: 0;
@@ -24,39 +24,46 @@
   }
   @include bp.bp(pc) {
     padding-top: 0;
-    padding-left: 10%;
+
     padding-bottom: auto;
     height: auto;
     display: block;
     position: inherit;
     grid-column: 2/3;
     grid-row: 1/4;
-    width: auto;
+    width: 300px;
     transition: inherit;
     overflow: inherit;
     z-index: inherit;
   }
   @include bp.bp(lpc) {
     width: 367px;
-    padding-left: 46px;
+
   }
   &__menu {
     display: none;
-
+    padding-left: 40px;
     @include bp.bp(pc) {
       display: block;
+      font-size: 30px;
       padding-top: 90px;
-      padding-bottom: 90px;
+      padding-bottom: 70px;
     }
   }
   &__unit {
     font-weight: bold;
-    & a {
-      color: #707070;
+    font-size: 24px;
+    list-style: none;
+    &>a{
+      display: block;
     }
   }
   &__list {
     list-style: none;
     line-height: 40px;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
