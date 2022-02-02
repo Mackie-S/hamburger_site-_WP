@@ -2,7 +2,7 @@
 <main class="l-main-wrapper">
   <article class="p-single-main">
     <div class="p-page-main__hero c-hero">
-      <h1 class="p-single-main__hero__title c-hero__title">ショップについて</h1>
+      <h1 class="p-single-main__hero__title c-hero__title"><?php the_title();?></h1>
     </div>
     <div class="c-container">
       <article class=" c-description">
@@ -26,10 +26,13 @@
       <img src="/images/single_cheese_burger.svg" alt="チーズバーガーセット"
         class="u-width--100-percent c-column c-margin-15px--sp c-margin-30px--tab">
       <article class="p-figure c-column c-margin-15px--sp c-margin-30px--tab">
-        <img src="/images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-        <p>
-          テキストが入ります。テキストが入ります。テキストがストが入りります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りまます。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-        </p>
+        <?php
+if(have_posts()){
+	while(have_posts()){
+		the_post();
+		the_content();
+	}
+} ?>
       </article>
       <article class="p-figure c-column c-margin-15px--sp c-margin-30px--tab">
         <p>

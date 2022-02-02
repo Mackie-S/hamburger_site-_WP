@@ -1,13 +1,23 @@
 <?php get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <h1 class="entry-title"><?php the_title() ?></h1>
+  <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
   <div>
     <?php the_content(); ?>
   </div>
 </article>
-<hr />
 <?php endwhile; ?>
+<?php if( is_category() ) : ?>
+echo 'カテゴリ:' . single_cat_title('',false) . 'の投稿一覧';
+<?php elseif( is_tag() ): ?>
+echo 'タグ:'. single_tag_title('',false) . 'の投稿一覧';
+<?php elseif( is_day() ): ?>
+echo get_the_date('Y年m月d日') . 'の投稿一覧';
+<?php elseif( is_month() ): ?>
+echo get_the_date('Y年m月') . 'の投稿一覧';
+<?php elseif( is_year() ): ?>
+echo get_the_date('Y年') . 'の投稿一覧';
+<?php endif; ?>
 <main class="l-main-wrapper">
   <article class="p-archive-main">
     <div class="p-archive-main__hero c-hero">
@@ -60,6 +70,15 @@
       </article>
     </div>
   </article>
+  <?php the_posts_pagination(
+    array(
+        'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
+        'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
+        'prev_text'     => __( '前へ'), // 「前へ」リンクのテキスト
+        'next_text'     => __( '次へ'), // 「次へ」リンクのテキスト
+        'type'          => 'list', // 戻り値の指定 (plain/list)
+    )
+); ?>
   <nav class="p-pagination">
     <p class="p-pagination__number">page 1/10</p>
     <ul class="p-pagination__list">
