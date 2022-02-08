@@ -2,6 +2,7 @@
     add_theme_support('menus'); //管理画面のメニュー追加
     add_theme_support('title-tag'); //タイトルタグサポートの許可
     add_theme_support( 'post-thumbnails' ); //アイキャッチ画の取り扱い許可
+    add_editor_style('editor-style.css');
     
     //タイトル出力記述-------------------------------------------
     // "hamburgersitewp"という名前はlocalディレクトリ直下のディレクトリ名
@@ -55,3 +56,20 @@
         }
       }
     //カスタムウォーカー編集終わり-------------------------------------
+
+
+    //WP-PageNaviの編集-----------------------------------
+
+    function custom_wp_pagenavi( $html ) {
+        $out = '';
+        $out = str_replace( "<div", "", $html );
+        $out = str_replace( "class='wp-pagenavi'>", "", $out );
+        $out = str_replace( "<a", "<li><a", $out );
+        $out = str_replace( "</a>", "</a></li>", $out );
+        $out = str_replace( "<span", "<li><span", $out );
+        $out = str_replace( "</span>", "</span></li>", $out );
+        $out = str_replace( "</div>", "", $out );
+      
+        return '<nav class="p-pagination"><ul>' . $out . '</ul></nav>';
+      }
+      add_filter( 'wp_pagenavi', 'custom_wp_pagenavi' );

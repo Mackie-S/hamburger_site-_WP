@@ -1,13 +1,15 @@
 @use "../../foundation/breakpoints" as bp;
 //見出しプラステキスト
-.c-description__title{
-  margin-bottom: 30px;
-  font-size: 28px;
-  @include bp.bp(tab) {
-    font-size: 36px;
-    margin-bottom: 25px;
+.c-description{
+  h2{
+    margin-bottom: 30px;
+    font-size: 28px;
+    @include bp.bp(tab) {
+      font-size: 36px;
+      margin-bottom: 25px;
+    }
   }
-  &-p{
+  p{
     margin-bottom: 20px;
     @include bp.bp(tab) {
       margin-bottom: 37px;

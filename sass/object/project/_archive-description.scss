@@ -1,13 +1,15 @@
 @use "../../foundation/breakpoints" as bp;
 // archiveとarchive-searchの小見出し部分
-.p-archive__description__title {
-  margin-bottom: 30px;
-  font-size: 28px;
-  @include bp.bp(tab) {
-    font-size: 36px;
-    margin-bottom: 25px;
+.p-archive__description{
+  &__title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    @include bp.bp(tab) {
+      font-size: 36px;
+      margin-bottom: 25px;
+    }
   }
-  &-p{
+  & p{
     margin-bottom: 20px;
     @include bp.bp(tab) {
       margin-bottom: 37px;

@@ -11,24 +11,13 @@
     margin-bottom: 30px;
   }
   &__image {
-    @include bp.bp(lsp) {
-      width: 50%;
-      display: none;
+    flex-basis: 50%;
+    img{
+      margin: 0;
+      display: block;
+      height: 100%;
     }
-    @include bp.bp(lpc) {
-      display: inherit;
     }
-  }
-  &__image--tab {
-    display: none;
-    @include bp.bp(lsp) {
-      width: 50%;
-      display: inherit;
-    }
-    @include bp.bp(lpc) {
-      display: none;
-    }
-  }
   &__desc {
     background-color: #3c2b1c;
     color: white;
@@ -48,7 +37,7 @@
         font-size: 36px;
       }
     }
-    dt {
+    h2 {
       font-size: 16px;
       font-weight: bold;
       margin-bottom: 10px;
@@ -60,7 +49,7 @@
         font-size: 24px;
       }
     }
-    dd {
+    p {
       font-size: 16px;
       margin-left: 20px;
       margin-right: 20px;
@@ -76,6 +65,11 @@
       font-weight: bold;
       border-color: white;
       background-color: white;
+      transition: background-color 0.3s;
+      &:hover{
+        background-color: #f2ede9;
+        transition: background-color 0.3s;
+      }
       @include bp.bp(lsp) {
         margin: auto;
       }

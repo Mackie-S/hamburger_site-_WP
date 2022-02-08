@@ -1,74 +1,50 @@
 <?php get_header(); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-  <div>
-    <?php the_content(); ?>
-  </div>
-</article>
-<?php endwhile; ?>
-<?php if( is_category() ) : ?>
-echo 'カテゴリ:' . single_cat_title('',false) . 'の投稿一覧';
-<?php elseif( is_tag() ): ?>
-echo 'タグ:'. single_tag_title('',false) . 'の投稿一覧';
-<?php elseif( is_day() ): ?>
-echo get_the_date('Y年m月d日') . 'の投稿一覧';
-<?php elseif( is_month() ): ?>
-echo get_the_date('Y年m月') . 'の投稿一覧';
-<?php elseif( is_year() ): ?>
-echo get_the_date('Y年') . 'の投稿一覧';
-<?php endif; ?>
 <main class="l-main-wrapper">
   <article class="p-archive-main">
     <div class="p-archive-main__hero c-hero">
       <h2 class="p-archive-main__hero__title c-hero__title">Menu:</h2>
-      <p class="p-archive-main__hero__title-sub c-hero__title-sub">チーズバーガー</p>
+      <p class="p-archive-main__hero__title-sub c-hero__title-sub"><?php single_cat_title();?>
+        <!-- カテゴリーの名前を吐き出す関数 -->
+      </p>
     </div>
     <div class="c-container">
       <article class="p-archive__description">
-        <h2 class="p-archive__description__title">小見出しが入ります</h2>
-        <p class="p-archive__description__title-p">
-          テキストが入ります。テキストが入ります。テキストがストが入りります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りまます。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-        </p>
+        <h2 class="p-archive__description__title"><?php single_cat_title();?></h2>
+        <?php if (is_category() && //カテゴリページの時
+          !is_paged() &&   //カテゴリページのトップの時
+          category_description()) : //カテゴリの説明文が空でない時 ?>
+        <?php echo category_description(); ?>
+        <?php endif; ?>
       </article>
+      <?php
+    if(have_posts()):
+      while(have_posts()):the_post();
+      ?>
       <article class="p-card">
-        <img src="images/cheese_burger.svg" alt="チーズバーガー" class="p-card__image">
-        <img src="images/cheese_burger_tab.svg" alt="チーズバーガー" class="p-card__image--tab">
-        <div class="p-card__desc">
-          <h4>チーズバーガー</h4>
-          <dl>
-            <dt>小見出しが入ります</dt>
-            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
-          </dl>
+        <div class="p-card__image">
+          <?php the_post_thumbnail('large',array('class' =>'p-card__image' )); ?>
+        </div>
+        <div class=" p-card__desc">
+          <h4><?php the_title();?></h4>
+          <?php
+     if( has_excerpt() ){
+          the_excerpt();
+          echo '<a href="';
+          the_permalink();
+          echo '">続きを読む</a>';
+     } else {
+          the_excerpt();
+     }
+?>
           <button class="p-card__desc-button c-button" type="button"
-            onclick="location.href='single.html'">詳しく見る</button>
+            onclick="location.href='<?php the_permalink(); ?>'">詳しく見る</button>
         </div>
       </article>
-      <article class="p-card">
-        <img src="images/cheese_burger.svg" alt="ダブルチーズバーガー" class="p-card__image">
-        <img src="images/cheese_burger_tab.svg" alt="ダブルチーズバーガー" class="p-card__image--tab">
-        <div class="p-card__desc">
-          <h4>ダブルチーズバーガー</h4>
-          <dl>
-            <dt>小見出しが入ります</dt>
-            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
-          </dl>
-          <button class="p-card__desc-button c-button" type="button">詳しく見る</button>
-        </div>
-      </article>
-      <article class="p-card">
-        <img src="images/cheese_burger.svg" alt="スペシャルチーズバーガー" class="p-card__image">
-        <img src="images/cheese_burger_tab.svg" alt="スペシャルチーズバーガー" class="p-card__image--tab">
-        <div class="p-card__desc">
-          <h4>スペシャルチーズバーガー</h4>
-          <dl>
-            <dt>小見出しが入ります</dt>
-            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
-          </dl>
-          <button class="p-card__desc-button c-button" type="button">詳しく見る</button>
-        </div>
-      </article>
-    </div>
+
+      <?php
+    endwhile;
+  endif;
+  ?>
   </article>
   <?php the_posts_pagination(
     array(
@@ -107,4 +83,5 @@ echo get_the_date('Y年') . 'の投稿一覧';
 <?php get_sidebar(); ?>
 <div class="c-cover">
 </div>
+<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
 <?php get_footer(); ?>
