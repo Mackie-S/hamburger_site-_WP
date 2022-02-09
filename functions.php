@@ -56,8 +56,20 @@
         }
       }
     //カスタムウォーカー編集終わり-------------------------------------
+    //抜粋文の長さと文の切れ目のカスタム----------------------
+    function custom_excerpt_length( $length ) {
+        return 40;	
+   }	
+   add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+   
+   function new_excerpt_more($more) {
+    return '・・・';
+}
+    add_filter('excerpt_more', 'new_excerpt_more');
+    //参照URL http://wpdocs.osdn.jp/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%BF%E3%82%B0/the_excerpt
 
-
+    //終了-------------------------------------------------
+    
     //WP-PageNaviの編集-----------------------------------
 
     function custom_wp_pagenavi( $html ) {

@@ -17,20 +17,6 @@
     ?><p>表示する記事がありません</p><?php
     endif; ?>
 
-    <img src=" images/single_cheese_burger.svg" alt="チーズバーガーセット"
-      class="u-width--100-percent c-column c-margin-15px--sp c-margin-30px--tab">
-    <article class="p-figure c-column c-margin-15px--sp c-margin-30px--tab">
-      <img src="images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-      <p>
-        テキストが入ります。テキストが入ります。テキストがストが入りります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りまます。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-      </p>
-    </article>
-    <article class="p-figure c-column c-margin-15px--sp c-margin-30px--tab">
-      <p>
-        テキストが入ります。テキストが入ります。テキストがストが入りります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りまます。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-      </p>
-      <img src="/images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-    </article>
     <div class="p-stress c-margin-15px--sp c-margin-30px--tab">
       <img src="/images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
     </div>

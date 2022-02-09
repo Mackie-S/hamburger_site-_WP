@@ -770,7 +770,7 @@ select {
   transition: background-color 0.3s;
 }
 .p-card__desc-button:hover {
-  background-color: #f2ede9;
+  background-color: #a9a9a9;
   transition: background-color 0.3s;
 }
 @media screen and (min-width: 760px) {
