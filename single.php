@@ -16,85 +16,8 @@
     else :
     ?><p>表示する記事がありません</p><?php
     endif; ?>
-
-    <div class="p-stress c-margin-15px--sp c-margin-30px--tab">
-      <img src="/images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-    </div>
-    <div class="c-tile c-margin-15px--sp c-margin-30px--tab">
-      <img src="/images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-      <img src="images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-      <img src="images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-      <img src="images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-      <img src="images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-      <img src="images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-      <img src="images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-      <img src="images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-      <img src="images/single_cheese_burger_tile.svg" alt="チーズバーガーセット">
-    </div>
-    <div class="p-list c-margin-15px--sp c-margin-30px--tab">
-      <ol>
-        <li>リストリストリスト</li>
-        <li>リストリストリスト</li>
-      </ol>
-      <ol>
-        <li>リスト2リスト2リスト</li>
-        <li>リスト2リスト2リスト</li>
-      </ol>
-      <ol>
-        <li>リストリストリスト</li>
-        <li>リストリストリスト</li>
-      </ol>
-    </div>
-    <div class="p-list c-margin-15px--sp c-margin-30px--tab">
-      <ul>
-        <li>リストリストリスト</li>
-        <li>リストリストリスト</li>
-      </ul>
-      <ul>
-        <li>リスト2リスト2リスト</li>
-        <li>リスト2リスト2リスト</li>
-      </ul>
-      <ul>
-        <li>リストリストリスト</li>
-        <li>リストリストリスト</li>
-      </ul>
-    </div>
-    <pre class="p-preformatted-text c-background--gray">
-          <code class="p-preformatted-text__code">
-            &lt;html&gt;
-                    &lt;head&gt;
-                    &lt;/head&gt;
-                    &lt;body&gt;
-                    &lt;/body&gt;
-            &lt;/html&gt;
-          </code>
-        </pre>
-    <table class="p-table c-margin-15px--sp c-margin-30px--tab">
-      <tr class="p-table__row">
-        <td>テーブル</td>
-        <td>テーブル</td>
-      </tr class="p-table__row">
-      <tr class="p-table__row">
-        <td>テーブル</td>
-        <td>テーブル</td>
-      </tr class="p-table__row">
-      <tr class="p-table__row">
-        <td>テーブル</td>
-        <td>テーブル</td>
-      </tr class="p-table__row">
-      <tr class="p-table__row">
-        <td>テーブル</td>
-        <td>テーブル</td>
-      </tr class="p-table__row">
-    </table>
-    <button class="c-button c-button--single c-margin-15px--sp c-margin-30px--tab">ボタン</button>
-    <p class="c-margin-15px--sp c-margin-30px--tab c-bold">boldboldboldboldboldbold</p>
-    </div>
   </article>
 </main>
-<?php get_sidebar(); ?>
-<div class="c-cover"></div>
-<?php get_footer(); ?>
 <?php get_sidebar(); ?>
 <div class="c-cover"></div>
 <?php get_footer(); ?>

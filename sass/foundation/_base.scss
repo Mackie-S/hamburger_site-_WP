@@ -26,15 +26,16 @@ dt,
 dd {
   font-family: "M+ 1m", sans-serif;
 }
-blockquote{
+blockquote,
+code {
   width: 100%;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   padding: 30px 20px;
   @include bp.bp(tab) {
     padding: 50px;
   }
-  cite{
+  cite {
     text-decoration: underline;
-    color: #4A6C9B;
+    color: #4a6c9b;
   }
 }

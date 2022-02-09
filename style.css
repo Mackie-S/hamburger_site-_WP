@@ -33,19 +33,22 @@ dd {
   font-family: "M+ 1m", sans-serif;
 }
 
-blockquote {
+blockquote,
+code {
   width: 100%;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   padding: 30px 20px;
 }
 @media screen and (min-width: 600px) {
-  blockquote {
+  blockquote,
+code {
     padding: 50px;
   }
 }
-blockquote cite {
+blockquote cite,
+code cite {
   text-decoration: underline;
-  color: #4A6C9B;
+  color: #4a6c9b;
 }
 
 *,
