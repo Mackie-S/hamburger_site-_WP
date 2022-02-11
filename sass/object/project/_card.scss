@@ -15,9 +15,12 @@
     img{
       margin: 0;
       display: block;
+      width: 100%;
       height: 100%;
+      object-fit: cover;
+      margin: auto;
     }
-    }
+  }
   &__desc {
     background-color: #3c2b1c;
     color: white;
