@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: 私のカスタムページ
+*/
+?>
 <?php get_header(); ?>
 <main class="l-main-wrapper">
   <article class="p-single-main">

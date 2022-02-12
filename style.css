@@ -844,12 +844,11 @@ select {
     padding-right: 1px;
   }
 }
-
-.page {
+.p-pagination .page {
   display: none;
 }
 @media screen and (min-width: 600px) {
-  .page {
+  .p-pagination .page {
     font-weight: bold;
     display: inline-block;
     border: solid 0.1px #707070;
@@ -864,17 +863,16 @@ select {
     transition: 0.3s;
   }
 }
-.page:hover {
+.p-pagination .page:hover {
   background-color: #3c2b1c;
   color: white;
   transition: 0.3s;
 }
-
-.current {
+.p-pagination .current {
   display: none;
 }
 @media screen and (min-width: 600px) {
-  .current {
+  .p-pagination .current {
     background-color: #3c2b1c;
     color: white;
     display: block;
@@ -883,16 +881,15 @@ select {
     margin-right: 8px;
   }
 }
-
-.previouspostslink {
+.p-pagination .previouspostslink {
   font-size: 20px;
 }
 @media screen and (min-width: 600px) {
-  .previouspostslink {
+  .p-pagination .previouspostslink {
     font-size: 0;
   }
 }
-.previouspostslink::before {
+.p-pagination .previouspostslink::before {
   content: "";
   background: url(images/prev_icon.svg) no-repeat center center/auto 100%;
   width: 16px;
@@ -903,16 +900,15 @@ select {
   margin-top: 10px;
   padding: 7px;
 }
-
-.nextpostslink {
+.p-pagination .nextpostslink {
   font-size: 20px;
 }
 @media screen and (min-width: 600px) {
-  .nextpostslink {
+  .p-pagination .nextpostslink {
     font-size: 0;
   }
 }
-.nextpostslink::after {
+.p-pagination .nextpostslink::after {
   content: "";
   background: url(images/next_icon.svg) no-repeat center center/auto 100%;
   width: 16px;
