@@ -12,11 +12,14 @@
   }
   &__image {
     flex-basis: 50%;
+    height: 300px;
+    @include bp.bp(tab) {
+      height: 500px;
+    }
     img{
       margin: 0;
       display: block;
       width: 100%;
-      height: 100%;
       object-fit: cover;
       margin: auto;
     }
@@ -71,12 +74,13 @@
       transition: background-color 0.3s;
       &:hover{
         background-color: #a9a9a9;
+        color: black;
         transition: background-color 0.3s;
       }
       @include bp.bp(lsp) {
         margin: auto;
       }
-      @include bp.bp(pc) {
+      @include bp.bp(tab) {
         width: 290px;
         height: 76px;
         border-radius: 40px;

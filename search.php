@@ -3,108 +3,55 @@
   <article class="p-archive-main">
     <div class="p-archive-main__hero c-hero">
       <h2 class="p-archive-main__hero__title c-hero__title">Search:</h2>
-      <p class="p-archive-main__hero__title-sub c-hero__title-sub">チーズバーガー</p>
+      <p class="p-archive-main__hero__title-sub c-hero__title-sub">
+        <?php the_search_query(  );?>
+      </p>
     </div>
-    <div class="c-container">
+    <div class="c-container c-container--archives">
+
       <article class="p-archive__description">
-        <h2 class="p-archive__description__title">小見出しが入ります</h2>
-        <p class="p-archive__description__title-p">
-          テキストが入ります。テキストが入ります。テキストがストが入りります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りまます。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-        </p>
+        <?php if(get_search_query()): ?>
+        <h2 class="p-archive__description__title">
+          <?php echo $wp_query->found_posts; ?>件の検索結果
+        </h2>
+        <?php endif; ?>
+        <?php if(have_posts() && get_search_query()):
+        while (have_posts(  )):the_post(  ); ?> <article class="p-card">
+          <div class="p-card__image">
+            <?php the_post_thumbnail('large',array('class' =>'p-card__image' )); ?>
+          </div>
+          <div class=" p-card__desc">
+            <h4><?php the_title();?></h4>
+            <?php
+     if( has_excerpt() ){
+          the_excerpt();
+          echo '<a href="';
+          the_permalink();
+          echo '">続きを読む</a>';
+     } else {
+          the_excerpt();
+     }
+?>
+
+            <button class="p-card__desc-button c-button" type="button"
+              onclick="location.href='<?php the_permalink(); ?>'">詳しく見る</button>
+          </div>
+        </article>
+        <?php endwhile;?>
+        <?php elseif(! get_search_query()): ?>
+        <h2 class="p-archive__description__title">
+          検索ワードが入力されてません。
+        </h2>
+        <?php else:?>
+        <h2 class="p-archive__description__title">
+          該当する記事はありませんでした。
+        </h2>
+        <?php endif;?>
+        <?php wp_pagenavi(); ?>
       </article>
-      <article class="p-card">
-        <img src="images/cheese_burger.svg" alt="チーズバーガー" class="p-card__image">
-        <img src="images/cheese_burger_tab.svg" alt="チーズバーガー" class="p-card__image--tab">
-        <div class="p-card__desc">
-          <h4>チーズバーガー</h4>
-          <dl>
-            <dt>小見出しが入ります</dt>
-            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
-          </dl>
-          <button class="p-card__desc-button c-button" type="button"
-            onclick="location.href='single.html'">詳しく見る</button>
-        </div>
-      </article>
-      <article class="p-card">
-        <img src="images/cheese_burger.svg" alt="チーズバーガー" class="p-card__image">
-        <img src="images/cheese_burger_tab.svg" alt="チーズバーガー" class="p-card__image--tab">
-        <div class="p-card__desc">
-          <h4>チーズバーガー</h4>
-          <dl>
-            <dt>小見出しが入ります</dt>
-            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
-          </dl>
-          <button class="p-card__desc-button c-button" type="button"
-            onclick="location.href='single.html'">詳しく見る</button>
-        </div>
-      </article>
-      <article class="p-card">
-        <img src="images/cheese_burger.svg" alt="チーズバーガー" class="p-card__image">
-        <img src="images/cheese_burger_tab.svg" alt="チーズバーガー" class="p-card__image--tab">
-        <div class="p-card__desc">
-          <h4>チーズバーガー</h4>
-          <dl>
-            <dt>小見出しが入ります</dt>
-            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
-          </dl>
-          <button class="p-card__desc-button c-button" type="button"
-            onclick="location.href='single.html'">詳しく見る</button>
-        </div>
-      </article>
-      <article class="p-card">
-        <img src="images/cheese_burger.svg" alt="チーズバーガー" class="p-card__image">
-        <img src="images/cheese_burger_tab.svg" alt="チーズバーガー" class="p-card__image--tab">
-        <div class="p-card__desc">
-          <h4>チーズバーガー</h4>
-          <dl>
-            <dt>小見出しが入ります</dt>
-            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
-          </dl>
-          <button class="p-card__desc-button c-button" type="button"
-            onclick="location.href='single.html'">詳しく見る</button>
-        </div>
-      </article>
-      <article class="p-card">
-        <img src="images/cheese_burger.svg" alt="チーズバーガー" class="p-card__image">
-        <img src="images/cheese_burger_tab.svg" alt="チーズバーガー" class="p-card__image--tab">
-        <div class="p-card__desc">
-          <h4>チーズバーガー</h4>
-          <dl>
-            <dt>小見出しが入ります</dt>
-            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
-          </dl>
-          <button class="p-card__desc-button c-button" type="button"
-            onclick="location.href='single.html'">詳しく見る</button>
-        </div>
-      </article>
-    </div>
-  </article>
-  <nav class="p-pagination">
-    <p class="p-pagination__number">page 1/10</p>
-    <ul class="p-pagination__list">
-      <li class="p-pagination__list-item--prev">
-        <a href="#" aria-label="前のページへ">
-          前へ
-        </a>
-      </li>
-      <li class="p-pagination__list-item active"><a href="#">1</a></li>
-      <li class="p-pagination__list-item"><a href="#">2</a></li>
-      <li class="p-pagination__list-item"><a href="#">3</a></li>
-      <li class="p-pagination__list-item"><a href="#">4</a></li>
-      <li class="p-pagination__list-item"><a href="#">5</a></li>
-      <li class="p-pagination__list-item"><a href="#">6</a></li>
-      <li class="p-pagination__list-item"><a href="#">7</a></li>
-      <li class="p-pagination__list-item"><a href="#">8</a></li>
-      <li class="p-pagination__list-item"><a href="#">9</a></li>
-      <li class="p-pagination__list-item--next">
-        <a href="#" aria-label="次のページへ">
-          次へ
-        </a>
-      </li>
-    </ul>
-  </nav>
 </main>
 <?php get_sidebar(); ?>
 <div class="c-cover">
 </div>
+
 <?php get_footer(); ?>

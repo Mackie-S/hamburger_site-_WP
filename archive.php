@@ -8,7 +8,7 @@
         <!-- カテゴリーの名前を吐き出す関数 -->
       </p>
     </div>
-    <div class="c-container">
+    <div class="c-container c-container--archives">
       <article class="p-archive__description">
         <h2 class="p-archive__description__title"><?php single_cat_title();?></h2>
         <?php if (is_category() && //カテゴリページの時
@@ -46,43 +46,10 @@
     endwhile;
   endif;
   ?>
+      <?php wp_pagenavi(); ?>
   </article>
-  <?php the_posts_pagination(
-    array(
-        'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
-        'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
-        'prev_text'     => __( '前へ'), // 「前へ」リンクのテキスト
-        'next_text'     => __( '次へ'), // 「次へ」リンクのテキスト
-        'type'          => 'list', // 戻り値の指定 (plain/list)
-    )
-); ?>
-  <nav class="p-pagination">
-    <p class="p-pagination__number">page 1/10</p>
-    <ul class="p-pagination__list">
-      <li class="p-pagination__list-item--prev">
-        <a href="#" aria-label="前のページへ">
-          前へ
-        </a>
-      </li>
-      <li class="p-pagination__list-item active"><a href="#">1</a></li>
-      <li class="p-pagination__list-item"><a href="#">2</a></li>
-      <li class="p-pagination__list-item"><a href="#">3</a></li>
-      <li class="p-pagination__list-item"><a href="#">4</a></li>
-      <li class="p-pagination__list-item"><a href="#">5</a></li>
-      <li class="p-pagination__list-item"><a href="#">6</a></li>
-      <li class="p-pagination__list-item"><a href="#">7</a></li>
-      <li class="p-pagination__list-item"><a href="#">8</a></li>
-      <li class="p-pagination__list-item"><a href="#">9</a></li>
-      <li class="p-pagination__list-item--next">
-        <a href="#" aria-label="次のページへ">
-          次へ
-        </a>
-      </li>
-    </ul>
-  </nav>
 </main>
 <?php get_sidebar(); ?>
 <div class="c-cover">
 </div>
-<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
 <?php get_footer(); ?>

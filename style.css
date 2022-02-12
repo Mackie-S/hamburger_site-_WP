@@ -3,6 +3,7 @@ body {
   font-family: "M+ 1m", sans-serif;
   width: 100%;
   color: #3c2a10;
+  background-color: #fffdfa;
 }
 @media screen and (min-width: 1200px) {
   body {
@@ -293,6 +294,14 @@ select {
 @media screen and (min-width: 1550px) {
   .c-container {
     padding: 80px;
+  }
+}
+.c-container--archives {
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 1550px) {
+  .c-container--archives {
+    padding-bottom: 60px;
   }
 }
 
@@ -710,13 +719,17 @@ select {
 }
 .p-card__image {
   flex-basis: 50%;
-  height: 500px;
+  height: 300px;
+}
+@media screen and (min-width: 600px) {
+  .p-card__image {
+    height: 500px;
+  }
 }
 .p-card__image img {
   margin: 0;
   display: block;
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   margin: auto;
@@ -779,6 +792,7 @@ select {
 }
 .p-card__desc-button:hover {
   background-color: #a9a9a9;
+  color: black;
   transition: background-color 0.3s;
 }
 @media screen and (min-width: 760px) {
@@ -786,7 +800,7 @@ select {
     margin: auto;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 600px) {
   .p-card__desc-button {
     width: 290px;
     height: 76px;
@@ -796,33 +810,12 @@ select {
 
 .p-pagination {
   font-family: "Roboto", "M+ 1m", sans-serif;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 @media screen and (min-width: 600px) {
   .p-pagination {
-    margin-left: 40px;
-    margin-right: 40px;
     justify-content: center;
     display: flex;
     align-items: center;
-  }
-}
-@media screen and (min-width: 1550px) {
-  .p-pagination {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-}
-.p-pagination__number {
-  display: none;
-}
-@media screen and (min-width: 600px) {
-  .p-pagination__number {
-    display: inherit;
-    font-weight: bold;
-    color: #707070;
-    margin-right: 10px;
   }
 }
 .p-pagination__list {
@@ -830,17 +823,33 @@ select {
   list-style-type: none;
   justify-content: space-between;
   padding: 0;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 600px) {
   .p-pagination__list {
     justify-content: center;
   }
 }
-.p-pagination__list-item {
+.p-pagination__list li:nth-child(1) {
   display: none;
 }
 @media screen and (min-width: 600px) {
-  .p-pagination__list-item {
+  .p-pagination__list li:nth-child(1) {
+    display: inherit;
+    font-weight: bold;
+    color: #707070;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 1px;
+  }
+}
+
+.page {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .page {
     font-weight: bold;
     display: inline-block;
     border: solid 0.1px #707070;
@@ -850,27 +859,40 @@ select {
     margin-left: 8px;
     margin-right: 8px;
     text-align: center;
-  }
-  .p-pagination__list-item a {
     display: block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 1px;
+    line-height: 33px;
+    transition: 0.3s;
   }
 }
-.p-pagination__list-item.active {
+.page:hover {
   background-color: #3c2b1c;
-}
-.p-pagination__list-item.active a {
-  pointer-events: none;
   color: white;
+  transition: 0.3s;
+}
+
+.current {
+  display: none;
 }
 @media screen and (min-width: 600px) {
-  .p-pagination__list-item--prev, .p-pagination__list-item--next {
+  .current {
+    background-color: #3c2b1c;
+    color: white;
+    display: block;
+    padding: 5px 13px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+.previouspostslink {
+  font-size: 20px;
+}
+@media screen and (min-width: 600px) {
+  .previouspostslink {
     font-size: 0;
   }
 }
-.p-pagination__list-item--prev a::before {
+.previouspostslink::before {
   content: "";
   background: url(images/prev_icon.svg) no-repeat center center/auto 100%;
   width: 16px;
@@ -879,8 +901,18 @@ select {
   margin-left: 8px;
   margin-right: 8px;
   margin-top: 10px;
+  padding: 7px;
 }
-.p-pagination__list-item--next a::after {
+
+.nextpostslink {
+  font-size: 20px;
+}
+@media screen and (min-width: 600px) {
+  .nextpostslink {
+    font-size: 0;
+  }
+}
+.nextpostslink::after {
   content: "";
   background: url(images/next_icon.svg) no-repeat center center/auto 100%;
   width: 16px;
@@ -888,6 +920,7 @@ select {
   display: inline-block;
   margin-left: 8px;
   margin-top: 10px;
+  padding: 7px;
 }
 
 /*Take out or Eat in部分*/

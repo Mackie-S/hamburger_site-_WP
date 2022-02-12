@@ -8,4 +8,10 @@
   @include bp.bp(lpc) {
     padding: 80px;
   }
+  &--archives{
+    padding-bottom: 30px;
+    @include bp.bp(lpc) {
+      padding-bottom: 60px;
+    }
+  }
 }

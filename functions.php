@@ -68,13 +68,7 @@
     add_filter('excerpt_more', 'new_excerpt_more');
     //参照URL http://wpdocs.osdn.jp/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%BF%E3%82%B0/the_excerpt
 
-    //終了-------------------------------------------------
-    
-
-
-
-    
-    //WP-PageNaviの編集-----------------------------------
+    //wp-pagenaviの設定---------------------------------------
 
     function custom_wp_pagenavi( $html ) {
         $out = '';
@@ -85,7 +79,16 @@
         $out = str_replace( "<span", "<li><span", $out );
         $out = str_replace( "</span>", "</span></li>", $out );
         $out = str_replace( "</div>", "", $out );
-      
-        return '<nav class="p-pagination"><ul>' . $out . '</ul></nav>';
+        return '<nav class="p-pagination"><ul class="p-pagination__list"' . $out . '</ul></nav>';
       }
       add_filter( 'wp_pagenavi', 'custom_wp_pagenavi' );
+    
+
+//redirect
+function set_redirect_template(){
+    if (isset($_GET['s']) && empty($_GET['s'])) {
+        include(TEMPLATEPATH . '/search.php');
+        exit;
+    }
+}
+add_action('template_redirect', 'set_redirect_template');
