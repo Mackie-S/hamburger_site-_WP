@@ -15,7 +15,6 @@
             return $title;
         }
     add_filter( 'pre_get_document_title', 'hamburgersitewp_title' );
-    //タイトル出力記述終了-----------------------------------------
     
     //もともと<head>で読み込んでたファイルの読み込み---------------
     function hamburgersitewp_script() {
@@ -27,7 +26,6 @@
         wp_enqueue_script('js-file', get_template_directory_uri().'/script.js', array(), '1.0.0');
     }
     add_action( 'wp_enqueue_scripts', 'hamburgersitewp_script' );
-    //読み込み記述終了----------------------------------------------
 
     // 使わないかも知れないけどウィジェット機能追加-------------
     function hamburgersitewp_widgets_init() {
@@ -44,7 +42,6 @@
         );
     }
     add_action( 'widgets_init', 'hamburgersitewp_widgets_init' );
-    //ウィジェット記述終わり-------------------------------------
 
     //カスタムウォーカー編集(カスタムメニューのulに勝手につくsub-menuを退かしたいため記述)
     class custom_walker_nav_menu extends Walker_Nav_Menu {
@@ -55,7 +52,6 @@
           $output .= '</ul>';
         }
       }
-    //カスタムウォーカー編集終わり-----------------------
 
     //wp-pagenaviの設定---------------------------------------
 
