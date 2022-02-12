@@ -44,9 +44,11 @@ if(strpos($check_content,'more-') !== false){//moreタグの判定
           該当する記事はありませんでした。
         </h2>
         <?php endif;?>
-        <?php if(empty(get_search_query())):
+        <!-- 検索ワードが空でなかったらページネーションを表示させる制御構文 -->
+        <?php if(! empty(get_search_query())):
           ?>
         <?php wp_pagenavi(); ?>
+        <?php endif;?>
       </article>
 </main>
 <?php get_sidebar(); ?>
