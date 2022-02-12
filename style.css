@@ -1117,12 +1117,10 @@ select {
 
 /* test*/
 .p-single-main__hero {
-  background-image: url("images/single_hero_sp.svg");
-}
-@media screen and (min-width: 1200px) {
-  .p-single-main__hero {
-    background-image: url("images/single_hero_pc.svg");
-  }
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 500px;
 }
 .p-single-main__hero__title {
   padding-top: 20%;

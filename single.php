@@ -6,7 +6,7 @@
         while( have_posts() ) :
             the_post(); ?>
     <div class="p-single-main__hero c-hero">
-      <?php the_post_thumbnail('full',array('class' =>'c-hero' )); ?>
+      <?php the_post_thumbnail('full',array('class' =>'p-single-main__hero' )); ?>
       <h1 class="p-single-main__hero__title c-hero__title"><?php the_title();?></h1>
     </div>
     <div class="c-container">
