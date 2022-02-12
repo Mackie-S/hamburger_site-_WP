@@ -1,9 +1,14 @@
 <?php
-    add_theme_support('menus'); //管理画面のメニュー追加
+
     add_theme_support('title-tag'); //タイトルタグサポートの許可
     add_theme_support( 'post-thumbnails' ); //アイキャッチ画の取り扱い許可
     add_editor_style('editor-style.css');
     
+    function register_my_menu() {
+        register_nav_menu( 'side menu','サイドメニュー');
+      }
+      add_action( 'after_setup_theme', 'register_my_menu' );
+      
     //タイトル出力記述-------------------------------------------
     // "hamburgersitewp"という名前はlocalディレクトリ直下のディレクトリ名
     function hamburgersitewp_title( $title ) {
