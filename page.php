@@ -9,11 +9,10 @@ Template Name: 私のカスタムページ
     <?php
 if(have_posts()):
 	while(have_posts()):
-		the_post();
-    the_content();?>
-    <div class="p-page-main__hero c-hero">
-      <?php the_post_thumbnail('full',array('class' =>'c-hero' )); ?>
-      <h1 class="p-single-main__hero__title c-hero__title"><?php the_title();?></h1>
+		the_post();?>
+    <div class="p-new-hero c-hero">
+      <?php the_post_thumbnail('full',array('class' =>'p-single-main__hero' )); ?>
+      <h1 class="p-new-hero__title"><?php the_title();?></h1>
     </div>
     <div class="c-container">
       <article id="post-<?php the_ID(); ?>" <?php post_class('c-description'); ?>>

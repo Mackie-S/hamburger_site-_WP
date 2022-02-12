@@ -1127,23 +1127,25 @@ select {
     height: 500px;
   }
 }
-.p-single-main__hero__title {
-  padding-top: 20%;
-  padding-bottom: 20%;
+
+.p-new-hero {
+  position: relative;
+}
+.p-new-hero__title {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  color: white;
   padding-left: 37px;
 }
 @media screen and (min-width: 600px) {
-  .p-single-main__hero__title {
+  .p-new-hero__title {
     font-size: 60px;
-    padding-top: 20%;
-    padding-bottom: 20%;
     padding-left: 50px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .p-single-main__hero__title {
-    padding-top: 15%;
-    padding-bottom: 15%;
+  .p-new-hero__title {
     padding-left: 86px;
   }
 }

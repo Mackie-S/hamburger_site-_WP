@@ -28,14 +28,12 @@
         <div class=" p-card__desc">
           <h4><?php the_title();?></h4>
           <?php
-     if( has_excerpt() ){
-          the_excerpt();
-          echo '<a href="';
-          the_permalink();
-          echo '">続きを読む</a>';
-     } else {
-          the_excerpt();
-     }
+$check_content = get_the_content();
+if(strpos($check_content,'more-') !== false){//moreタグの判定
+  the_content('','true');
+}else{
+  the_excerpt();
+}
 ?>
           <button class="p-card__desc-button c-button" type="button"
             onclick="location.href='<?php the_permalink(); ?>'">詳しく見る</button>
