@@ -13,6 +13,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
   <header class="l-header">
     <div class="p-header">
       <!--FLOCSSのPDFを模して記述、試しにこれで流してみる-->

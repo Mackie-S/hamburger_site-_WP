@@ -14,6 +14,7 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class('c-description'); ?>>
         <?php the_content(); ?>
     </div>
+    <?php wp_link_pages(); ?>
     <?php endwhile;
     else :
     ?><p>表示する記事がありません</p><?php

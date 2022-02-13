@@ -2,6 +2,7 @@
 
     add_theme_support('title-tag'); //タイトルタグサポートの許可
     add_theme_support( 'post-thumbnails' ); //アイキャッチ画の取り扱い許可
+    add_theme_support( 'automatic-feed-links' );
     add_editor_style('editor-style.css');
     
     function register_my_menu() {
@@ -32,21 +33,6 @@
     }
     add_action( 'wp_enqueue_scripts', 'hamburgersitewp_script' );
 
-    // 使わないかも知れないけどウィジェット機能追加-------------
-    function hamburgersitewp_widgets_init() {
-        register_sidebar (
-            array(
-                'name'          => 'カテゴリーウィジェット',
-                'id'            => 'category_widget',
-                'description'   => 'カテゴリー用ウィジェットです',
-                'before_widget' => '<div id="%1$s" class="widget %2$s">',
-                'after_widget'  => '</div>',
-                'before_title'  => '<h2><i class="fa fa-folder-open" aria-hidden="true"></i>',
-                'after_title'   => "</h2>\n",
-            )
-        );
-    }
-    add_action( 'widgets_init', 'hamburgersitewp_widgets_init' );
 
     //カスタムウォーカー編集(カスタムメニューのulに勝手につくsub-menuを退かしたいため記述)
     class custom_walker_nav_menu extends Walker_Nav_Menu {
