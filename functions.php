@@ -27,8 +27,8 @@
         wp_enqueue_style( 'Roboto', '//fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap', array() );
         wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/modern-css-reset.css', array(), );
         wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.0.0' );
-        wp_enqueue_script('jquery', get_template_directory_uri().'//code.jquery.com/jquery-3.6.0.min.js', array(), '3.6.0');
-        wp_enqueue_script('js-file', get_template_directory_uri().'/script.js', array(), '1.0.0');
+        wp_enqueue_script('jquery', get_template_directory_uri().'/js/jquery-3.6.0.min.js', array(), '3.6.0');
+        wp_enqueue_script('js-file', get_template_directory_uri().'/js/script.js', array(), '1.0.0');
     }
     add_action( 'wp_enqueue_scripts', 'hamburgersitewp_script' );
 
