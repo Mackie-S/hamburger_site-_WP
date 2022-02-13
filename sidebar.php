@@ -12,7 +12,7 @@
     'container_class' => '',
     'menu_id' => '',
     'menu_class' => 'p-sidebar__unit',
-    'walker'  => new custom_walker_nav_menu
+    'walker'  => new custom_walker_nav_menu,
     'theme_location' => 'sidebar'
   )
 ); ?>
