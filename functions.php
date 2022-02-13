@@ -5,7 +5,7 @@
     add_editor_style('editor-style.css');
     
     function register_my_menu() {
-        register_nav_menu( 'side menu','サイドメニュー');
+        register_nav_menu( 'sidebar','サイドメニュー');
       }
       add_action( 'after_setup_theme', 'register_my_menu' );
       

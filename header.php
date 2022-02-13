@@ -9,7 +9,6 @@
   <!-- 電話番号っぽくてもリンクにするな！という意味 -->
   <meta name="description" content="WordPress theme development static data of Hamburger site">
   <meta name="keywords" content="WordPress, Theme, development,Hamburger site">
-  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
   <?php wp_head(); ?>
 </head>
 
