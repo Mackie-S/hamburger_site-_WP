@@ -42,4 +42,21 @@
       }
     }
   }
+  &--loop{
+    position: relative;
+    &__title {
+      position: absolute;
+      top: 40%;
+      left: 0;
+      color: white;
+      padding-left: 37px;
+      @include bp.bp(tab) {
+        font-size: 60px;
+        padding-left: 50px;
+      }
+      @include bp.bp(pc) {
+        padding-left: 86px;
+      }
+    }
+  }
 }

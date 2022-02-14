@@ -286,6 +286,27 @@ select {
     padding-bottom: 5%;
   }
 }
+.c-hero--loop {
+  position: relative;
+}
+.c-hero--loop__title {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  color: white;
+  padding-left: 37px;
+}
+@media screen and (min-width: 600px) {
+  .c-hero--loop__title {
+    font-size: 60px;
+    padding-left: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .c-hero--loop__title {
+    padding-left: 86px;
+  }
+}
 
 .c-container {
   padding: 20px;
@@ -1132,28 +1153,6 @@ select {
 @media screen and (min-width: 600px) {
   .p-single-main__hero {
     height: 500px;
-  }
-}
-
-.p-new-hero {
-  position: relative;
-}
-.p-new-hero__title {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  color: white;
-  padding-left: 37px;
-}
-@media screen and (min-width: 600px) {
-  .p-new-hero__title {
-    font-size: 60px;
-    padding-left: 50px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .p-new-hero__title {
-    padding-left: 86px;
   }
 }
 

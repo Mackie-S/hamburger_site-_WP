@@ -3,9 +3,9 @@
     if( have_posts() ) :
         while( have_posts() ) :
             the_post(); ?>
-  <div class="p-new-hero c-hero">
+  <div class="c-hero--loop c-hero">
     <?php the_post_thumbnail('full',array('class' =>'p-single-main__hero' )); ?>
-    <h1 class="p-new-hero__title"><?php the_title();?></h1>
+    <h1 class="c-hero--loop__title"><?php the_title();?></h1>
   </div>
 
   <div class="c-container">
