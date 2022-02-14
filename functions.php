@@ -5,6 +5,7 @@
     add_theme_support( 'automatic-feed-links' );
     add_editor_style('editor-style.css');
     
+    //sidebar取り扱い許可記述
     function register_my_menu() {
         register_nav_menu( 'sidebar','サイドメニュー');
       }
@@ -59,8 +60,7 @@
       }
       add_filter( 'wp_pagenavi', 'custom_wp_pagenavi' );
     
-
-//redirect
+//検索ワード未入力時にsearch.phpにredirectす記述
 function set_redirect_template(){
     if (isset($_GET['s']) && empty($_GET['s'])) {
         include(TEMPLATEPATH . '/search.php');
