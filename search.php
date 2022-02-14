@@ -8,7 +8,6 @@
       </p>
     </div>
     <div class="c-container c-container--archives">
-
       <article class="p-archive__description">
         <?php if(get_search_query()): ?>
         <h2 class="p-archive__description__title">

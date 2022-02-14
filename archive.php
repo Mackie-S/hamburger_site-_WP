@@ -2,7 +2,6 @@
 <main class="l-main-wrapper">
   <article class="p-archive-main">
     <div class="p-archive-main__hero c-hero">
-
       <h2 class="p-archive-main__hero__title c-hero__title">Menu:</h2>
       <p class="p-archive-main__hero__title-sub c-hero__title-sub"><?php single_cat_title();?>
         <!-- カテゴリーの名前を吐き出す関数 -->
@@ -39,7 +38,6 @@ if(strpos($check_content,'more-') !== false){//moreタグの判定
             onclick="location.href='<?php the_permalink(); ?>'">詳しく見る</button>
         </div>
       </article>
-
       <?php
     endwhile;
   endif;
