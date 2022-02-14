@@ -40,3 +40,6 @@ code {
     color: #4a6c9b;
   }
 }
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
