@@ -600,6 +600,9 @@ select {
 .p-sidebar__list li {
   margin-top: 15px;
 }
+.p-sidebar__close {
+  background-color: #f2ede9;
+}
 
 /*ダミーサイトと書かれた部分*/
 .p-front-main__hero {
