@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main class="l-main-wrapper">
   <!-- ループここから -->
-
+  <?php get_template_part( 'loop-single' ); ?>
   <!-- ループここまで -->
 </main>
 <?php get_sidebar(); ?>
